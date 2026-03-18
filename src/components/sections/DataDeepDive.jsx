@@ -62,8 +62,8 @@ const intentSignals = [
     signals: [
       'Added product to cart but didn\'t buy (cart abandonment)',
       'Visited the pricing/checkout page multiple times',
-      'Searched for a brand or product name directly',
-      'Opened 3+ emails from the same brand in a week',
+      'Checked financing or credit score on another site (Zeta sees this!)',
+      'Physically visited a store or dealership (location signal)',
     ],
     color: 'text-accent-coral',
     bg: 'bg-accent-coral/10 border-accent-coral/20',
@@ -118,9 +118,11 @@ export default function DataDeepDive() {
         </h3>
         <p className="text-text-secondary text-sm mb-4">
           When we say Zeta has 240M profiles with 2,500+ data points each, here's what that means.
-          Think of it like a dating profile — but instead of "loves hiking," it's "browsed Nike
-          running shoes three times, opened two emails from Hoka, and lives in a zip code where
-          people spend 2x the national average on athletic wear."
+          The system processes <strong className="text-zeta-purple">1+ trillion signals every month</strong> across{' '}
+          <strong className="text-zeta-blue">12.7 billion identifiers</strong> — emails, device IDs, phone numbers,
+          cookies — all collapsed into real people. Think of it like a dating profile — but instead
+          of "loves hiking," it's "browsed Nike running shoes three times, opened two emails from
+          Hoka, and lives in a zip code where people spend 2x the national average on athletic wear."
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -222,18 +224,18 @@ export default function DataDeepDive() {
                 <span>💎</span> Zeta: Open Ecosystem (The Full Picture)
               </h4>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Zeta doesn't own a store, so they can't see the cash register ring. But they see
+                Zeta doesn't own a store, so they can't see the cash register ring directly. But they see
                 <strong> everything else</strong>: the browsing, the email opens, the ad clicks,
                 the site visits, the return visits, the content consumption — across the{' '}
-                <em>entire open web</em>.
+                <em>entire open web</em>, with <strong className="text-zeta-blue">95%+ deterministic match rates</strong>.
               </p>
               <p className="text-text-secondary text-sm leading-relaxed mt-2">
-                Instead of closed-loop, Zeta uses <strong>multi-touch attribution</strong> — tracking
-                every touchpoint in the customer journey and assigning credit to each one. They can
-                see: "This person saw a CTV ad on Tuesday, opened an email on Wednesday, and visited
-                the checkout page on Thursday." Even without seeing the final purchase, they can
-                measure <strong>lift</strong> — did the people who saw our campaign buy more than
-                those who didn't?
+                <strong>Here's the key:</strong> Zeta also ingests the client's own CRM, ecommerce, and
+                point-of-sale data. So when someone <em>does</em> buy — on the brand's website, in-store,
+                wherever — that purchase signal flows back into Zeta and gets matched to the same person.
+                The system then uses <strong>multi-touch attribution</strong> to say: "This person saw a
+                CTV ad Tuesday, opened an email Wednesday, and bought Thursday. Here's how much credit
+                each touchpoint deserves."
               </p>
             </div>
 
