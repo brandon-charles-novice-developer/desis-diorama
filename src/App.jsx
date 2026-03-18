@@ -3,6 +3,7 @@ import Welcome from './components/sections/Welcome'
 import Problem from './components/sections/Problem'
 import Solution from './components/sections/Solution'
 import DataEdge from './components/sections/DataEdge'
+import DataDeepDive from './components/sections/DataDeepDive'
 import KargoBridge from './components/sections/KargoBridge'
 import Competition from './components/sections/Competition'
 import TalkTracks from './components/sections/TalkTracks'
@@ -15,6 +16,7 @@ export default function App() {
       <Problem />
       <Solution />
       <DataEdge />
+      <DataDeepDive />
       <KargoBridge />
       <Competition />
       <TalkTracks />

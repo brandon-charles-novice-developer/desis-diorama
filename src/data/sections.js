@@ -3,6 +3,7 @@ export const sections = [
   { id: 'problem', label: 'The Problem', emoji: '🍝' },
   { id: 'solution', label: "Zeta's Fix", emoji: '⭐' },
   { id: 'data-edge', label: 'Data Edge', emoji: '📱' },
+  { id: 'data-deep-dive', label: 'How Data Works', emoji: '🔬' },
   { id: 'kargo-bridge', label: 'Your Bridge', emoji: '🌉' },
   { id: 'competition', label: 'Competition', emoji: '🏆' },
   { id: 'talk-tracks', label: 'Talk Tracks', emoji: '🎤' },
