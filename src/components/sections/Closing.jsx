@@ -52,7 +52,17 @@ export default function Closing() {
         </div>
       </div>
 
-      <Callout emoji="💌" type="love" className="mt-8">
+      <div className="mt-8 bg-gradient-to-br from-amber-50 to-warm-highlight rounded-2xl border border-accent-gold/20 p-5 md:p-6">
+        <p className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">🔥 Pre-Interview Anthem</p>
+        <p className="text-text-primary text-sm font-medium italic leading-relaxed">
+          "Homie, I'm a hustler in every sense of the word" — and tomorrow you walk in there
+          and bring the heat. You know the product now. You know the value.
+          You know why it wins. Time to close.
+        </p>
+        <p className="text-text-muted text-xs mt-2">— "Heat," 50 Cent, <em>Get Rich or Die Tryin'</em></p>
+      </div>
+
+      <Callout emoji="💌" type="love" className="mt-6">
         <div className="space-y-3">
           <p>
             <strong className="text-text-primary">Hey.</strong> You're going to be amazing tomorrow.
@@ -79,10 +89,13 @@ export default function Closing() {
       </Callout>
 
       <div className="mt-8 text-center">
-        <p className="text-text-muted text-xs">
+        <p className="text-text-muted text-sm italic">
+          XOXO, you know you love me. 💋
+        </p>
+        <p className="text-text-muted text-xs mt-2">
           Desi's Diorama on the Path to Greatness — March 2026
         </p>
-        <p className="text-2xl mt-2">🌸⭐💪</p>
+        <p className="text-2xl mt-2">🌸👑💪</p>
       </div>
     </section>
   )

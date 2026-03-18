@@ -22,7 +22,8 @@ export default function Welcome() {
             </p>
             <p className="text-text-secondary text-sm mt-4">
               Scroll down. By the time you hit the bottom, you'll know Zeta better
-              than most people who work there. ✨
+              than most people who work there. Spotted: Desi, fully prepped and
+              dangerously confident. ✨
             </p>
           </div>
         </div>

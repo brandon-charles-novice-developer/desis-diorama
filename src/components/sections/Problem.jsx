@@ -85,7 +85,10 @@ export default function Problem() {
       <Callout emoji="🎯" type="key" className="mt-6">
         <strong className="text-text-primary">The bottom line:</strong> Brands are spending millions
         on tools that don't connect, targeting people they can't actually identify, and measuring
-        results they can't fully trust. <strong className="text-accent-pink">That's the gap Zeta fills.</strong>
+        results they can't fully trust. As The Countess would say —{' '}
+        <strong className="text-accent-pink">money can't buy you class</strong>, and
+        it definitely can't buy you a marketing stack that works when every vendor is doing
+        their own thing. That's the gap Zeta fills.
       </Callout>
     </section>
   )

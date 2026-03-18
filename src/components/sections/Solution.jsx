@@ -41,14 +41,14 @@ export default function Solution() {
       <SectionHeading
         emoji="⭐"
         title="Zeta = Everything in One Box"
-        subtitle="AKA: Mario's Star Power"
+        subtitle="AKA: The Blair Waldorf of Marketing Platforms"
       />
 
-      <Callout emoji="🍄" type="tip">
-        <strong>Think Super Mario:</strong> Instead of collecting a mushroom from one vendor,
-        a fire flower from another, and a star from a third — Zeta IS the star.
-        One power-up that makes you invincible. Data, intelligence, and activation
-        all in one system. No running between worlds to collect pieces.
+      <Callout emoji="👑" type="tip">
+        <strong>Think Blair Waldorf:</strong> Why have five unreliable minions when you can
+        run the entire Upper East Side yourself? Zeta doesn't need a coalition of messy vendors —
+        it IS the operation. Data, intelligence, and activation all under one roof.
+        One queen, one throne, zero drama between departments.
       </Callout>
 
       <div className="mt-6 rounded-3xl overflow-hidden border border-warm-border shadow-soft">

@@ -53,7 +53,9 @@ export default function KargoBridge() {
         Remember when Scheana went from "Sandoval's ex-friend's girlfriend" to main character
         energy with her own narrative? That's this transition. Same hustle, same work ethic,
         same relationship magic — but now you're selling the <em>whole platform</em>,
-        not just one piece of the puzzle.
+        not just one piece of the puzzle. And unlike Jax declaring "I'm the number one guy
+        in this group" with nothing to back it up — you actually <em>have</em> the receipts.
+        Five years of enterprise relationships and agency credibility.
       </Callout>
 
       <div className="space-y-3 mt-6">

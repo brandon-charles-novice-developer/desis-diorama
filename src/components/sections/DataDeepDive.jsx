@@ -106,9 +106,11 @@ export default function DataDeepDive() {
       />
 
       <Callout emoji="💅" type="love">
-        You don't need to explain this like an engineer. But understanding <em>what</em> Zeta
-        knows and <em>how</em> they know it is the difference between "I sell a platform" and
-        "I understand why this platform wins." This is your secret confidence layer.
+        You don't need to explain this like an engineer. Think Real Bros of Simi Valley energy —
+        keep it chill, keep it simple, and if someone throws a technical term at you, just translate
+        it into normal-people language. Understanding <em>what</em> Zeta knows and <em>how</em> they
+        know it is the difference between "I sell a platform" and "I understand why this platform
+        wins." This is your secret confidence layer.
       </Callout>
 
       {/* What Data Feeds the Machine */}

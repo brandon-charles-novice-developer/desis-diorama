@@ -5,7 +5,7 @@ const competitors = [
   {
     name: 'Salesforce & Adobe',
     housewife: 'Kyle Richards',
-    housewifeDesc: "Been around forever, everyone knows the name, but the house is a renovation project held together with duct tape and good lighting.",
+    housewifeDesc: "Been around forever, everyone knows the name, but the house is a renovation project held together with duct tape and good lighting. They call themselves \"enterprise\" clouds — giving us real Victoria Polvi \"Enterprise Partnerships Team\" energy. Sounded impressive until she ended up at Enterprise Rent-A-Car.",
     badge: 'Slow + Expensive',
     badgeColor: 'text-accent-coral bg-accent-coral/10',
     weaknesses: [
