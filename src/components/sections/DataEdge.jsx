@@ -90,18 +90,18 @@ export default function DataEdge() {
           {[
             {
               icon: '📬',
-              title: '235 million email identities per month',
-              desc: "Email addresses are the most reliable way to ID someone online. They don't disappear when cookies get blocked. Zeta just added a massive pile of them.",
+              title: '235 million hashed email identities per month',
+              desc: "These come from 2,000+ publishers where people voluntarily signed up for newsletters or logged in. The emails are scrambled (\"hashed\") before Zeta ever touches them — Zeta never sees the raw email address, just a coded version that lets them recognize the same person across sites.",
             },
             {
               icon: '📰',
               title: '2,000+ premium publishers',
-              desc: 'Think top news sites, lifestyle publications — places brands actually want their ads. Zeta can now connect advertisers directly to those publishers.',
+              desc: "Think Condé Nast, major news sites, lifestyle publications. When someone reads a newsletter, a tiny tracking pixel notes \"this person engaged.\" That signal links to their hashed email — connecting content interests to a real identity.",
             },
             {
               icon: '🛒',
-              title: 'Retail media superpowers',
-              desc: 'Brands can now serve personalized ads inside email newsletters and premium content. Huge for retail clients trying to reach shoppers with real intent.',
+              title: 'Retail media capabilities',
+              desc: "Brands can serve targeted ads inside email newsletters based on what that person has browsed or shown interest in. Important: Zeta doesn't see actual purchases on its own — that data comes from the brand sharing their sales data back into the platform.",
             },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3 bg-warm-highlight rounded-xl p-4">

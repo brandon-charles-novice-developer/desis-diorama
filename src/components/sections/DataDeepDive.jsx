@@ -6,8 +6,8 @@ const dataTypes = [
   {
     emoji: '📧',
     name: 'Email Engagement',
-    what: 'Opens, clicks, forwards, unsubscribes across billions of emails',
-    why: "Email is the most stable identifier online. It survives cookie deletion, device switches, and privacy changes. When someone opens a brand's email, Zeta knows exactly who they are.",
+    what: 'Whether someone opened an email and what links they clicked — NOT the email content itself',
+    why: "Zeta embeds a tiny invisible tracking pixel in emails. When the email loads, the pixel fires and says 'this person opened it.' If they click a link, the redirect captures that too. Zeta never reads the actual email — they only see: opened? yes/no. Clicked? which link.",
     color: 'bg-zeta-blue/10 border-zeta-blue/15',
   },
   {
@@ -144,6 +144,59 @@ export default function DataDeepDive() {
           different is they have <strong>all seven in one place</strong>, attached to the same
           identity. No exporting. No syncing. No hoping the data matches up.
         </Callout>
+
+        {/* What Zeta Can and Can't See */}
+        <div className="mt-6 bg-warm-card rounded-2xl border border-warm-border shadow-soft overflow-hidden">
+          <div className="bg-accent-coral/10 px-5 py-3 border-b border-warm-border">
+            <h4 className="text-text-primary font-bold text-sm flex items-center gap-2">
+              <span>🚦</span> Important: What Zeta CAN vs. CAN'T See
+            </h4>
+            <p className="text-text-muted text-xs">So you never say something inaccurate in an interview</p>
+          </div>
+          <div className="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <p className="text-xs font-bold text-accent-mint uppercase tracking-wider mb-2">What Zeta CAN See</p>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {[
+                  'Email opens (via tracking pixel) and link clicks (via redirect)',
+                  'Website browsing behavior (via their Zync tag on client sites)',
+                  "Hashed email identities from 2,000+ publisher newsletters (people who opted in)",
+                  "Transaction data that the brand/client uploads into Zeta's system",
+                  'Location signals, app activity, and ad engagement across their network',
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-accent-mint flex-shrink-0">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-accent-coral uppercase tracking-wider mb-2">What Zeta CAN'T See</p>
+              <ul className="space-y-2 text-sm text-text-secondary">
+                {[
+                  "Actual email content — they never read anyone's emails, only track opens/clicks",
+                  "Emails from other providers (Gmail, Outlook) — only emails with Zeta's pixel in them",
+                  "Purchases happening at a store or on a website — unless the brand shares that data back",
+                  'Raw email addresses — LiveIntent hashes (scrambles) them before Zeta touches them',
+                  "Anything from people who didn't opt in — all data is permission-based",
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-accent-coral flex-shrink-0">✕</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="bg-warm-highlight px-5 py-3 border-t border-warm-border">
+            <p className="text-text-secondary text-xs">
+              <strong className="text-text-primary">Bottom line:</strong> Zeta is a matching engine, not a surveillance system.
+              Their power comes from combining data that consumers consented to share across many sources —
+              not from secretly watching people.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* How Intent Works */}
@@ -206,9 +259,10 @@ export default function DataDeepDive() {
                 <span>🛒</span> Amazon / Walmart Connect: Closed-Loop (But Walled)
               </h4>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Amazon and Walmart see the <strong>actual purchase</strong> happen on their platform.
-                Ad → click → buy → done. That's "closed-loop attribution" — they can prove exactly
-                which ad led to which sale. It's powerful.
+                Amazon and Walmart <strong>own the cash register</strong>. When someone sees an ad
+                and then buys on Amazon, they can prove exactly which ad led to which sale.
+                That's "closed-loop attribution" — zero guesswork on purchases that happen
+                on their platform.
               </p>
               <p className="text-text-secondary text-sm leading-relaxed mt-2">
                 <strong className="text-accent-coral">But here's the catch:</strong> They only see
@@ -221,35 +275,56 @@ export default function DataDeepDive() {
 
             <div className="border-t border-warm-border pt-4">
               <h4 className="text-text-primary font-bold text-sm mb-2 flex items-center gap-2">
-                <span>💎</span> Zeta: Open Ecosystem (The Full Picture)
+                <span>💎</span> Zeta: Open Ecosystem (Different Strengths)
               </h4>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Zeta doesn't own a store, so they can't see the cash register ring directly. But they see
-                <strong> everything else</strong>: the browsing, the email opens, the ad clicks,
-                the site visits, the return visits, the content consumption — across the{' '}
-                <em>entire open web</em>, with <strong className="text-zeta-blue">95%+ deterministic match rates</strong>.
+                <strong>Important to understand:</strong> Zeta does NOT independently see purchases.
+                They don't own a store or a checkout page. What Zeta sees is the{' '}
+                <strong>entire journey leading up to a purchase</strong> — the browsing, the email opens,
+                the ad clicks, the site visits, the content consumption — across the open web with{' '}
+                <strong className="text-zeta-blue">95%+ deterministic match rates</strong>.
               </p>
               <p className="text-text-secondary text-sm leading-relaxed mt-2">
-                <strong>Here's the key:</strong> Zeta also ingests the client's own CRM, ecommerce, and
-                point-of-sale data. So when someone <em>does</em> buy — on the brand's website, in-store,
-                wherever — that purchase signal flows back into Zeta and gets matched to the same person.
-                The system then uses <strong>multi-touch attribution</strong> to say: "This person saw a
-                CTV ad Tuesday, opened an email Wednesday, and bought Thursday. Here's how much credit
-                each touchpoint deserves."
+                <strong>So how do they measure results?</strong> The brand shares their own sales data
+                back into Zeta — uploading CRM records, ecommerce transactions, or point-of-sale data.
+                Zeta then matches those buyers (via hashed email or other identifiers) to the people who
+                saw ads. This creates the attribution: "Of the people who saw our campaign, X% went on
+                to purchase, vs. Y% who didn't see it." The purchase verification comes from the{' '}
+                <strong>brand's own data</strong>, not from Zeta watching the sale happen.
               </p>
             </div>
 
             <div className="bg-warm-highlight rounded-xl p-4">
               <p className="text-xs font-bold text-zeta-blue uppercase tracking-wider mb-2">
-                The Honest Pitch
+                How to Talk About This Honestly
               </p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                "Amazon gives you a cash register receipt but keeps you locked in their store.
-                Zeta gives you the full customer journey across the entire internet — and the
-                audiences are <em>yours</em> to keep. For brands whose sales happen on their
-                own website, in stores, or through partners, Zeta's model is more complete
-                than any walled garden."
+                "Amazon can tell you exactly which ad led to which sale <em>on Amazon</em>. But most brands
+                sell on their own website, in stores, or through partners — not on Amazon. Zeta tracks
+                the full customer journey across the entire open web, and when the brand shares their
+                sales data back, we can connect the dots between ad exposure and actual purchases.
+                Plus the audiences are yours to keep and grow — you're not renting access."
               </p>
+            </div>
+
+            <div className="bg-accent-gold/10 border border-accent-gold/20 rounded-xl p-4 mt-3">
+              <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-2">
+                ⚠️ What NOT to Say
+              </p>
+              <ul className="space-y-1.5 text-sm text-text-secondary">
+                <li className="flex gap-2">
+                  <span className="text-accent-coral flex-shrink-0">✕</span>
+                  <span>"Zeta can see all purchases" — <em>No. Only when the brand shares that data.</em></span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-accent-coral flex-shrink-0">✕</span>
+                  <span>"We have closed-loop attribution like Amazon" — <em>Different model. Zeta's loop closes when the client feeds sales data back in.</em></span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-accent-mint flex-shrink-0">✓</span>
+                  <span>"We track the full journey and when brands share their conversion data, we can attribute results with deterministic precision" — <em>Accurate and impressive.</em></span>
+                </li>
+              </ul>
             </div>
           </div>
         </Card>
@@ -338,9 +413,9 @@ export default function DataDeepDive() {
         <h3 className="text-text-primary font-bold text-base mb-3">📝 If They Ask "How Does the Data Work?"</h3>
         <div className="space-y-2">
           {[
-            'Zeta has 240M profiles built from email engagement, web behavior, transactions, mobile, location, CRM data, and publisher content — all in one place.',
-            'The AI reads those signals in real-time and assigns intent scores — from "just browsing" to "about to buy."',
-            "Unlike Amazon/Walmart, Zeta works across the open web. You don't get a cash register receipt, but you get the full customer journey and the audiences are yours to keep.",
+            'Zeta has 240M profiles built from email engagement (tracking pixels, not reading emails), web behavior, mobile, location, CRM data, and publisher content — all in one place.',
+            'The AI reads those signals in real-time and assigns intent scores — from "just browsing" to "about to buy" — based on behavioral patterns, not guesswork.',
+            "Zeta doesn't see purchases on its own. Brands share their sales data back into the platform, and Zeta matches buyers to the people who saw campaigns. That's how attribution works.",
             'A single action (email click) can trigger the entire omnichannel journey (CTV → SMS → display) because all channels share the same identity. No other platform does this natively.',
           ].map((bullet, i) => (
             <div key={i} className="flex items-start gap-2">
